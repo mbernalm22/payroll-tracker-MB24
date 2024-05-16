@@ -3,13 +3,44 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
+  //*this list will hold the input we get from users
   const employeeList = [];
-  // TODO: Get user input to create and return an array of employee objects
-  
+  let firstName = prompt("Enter user First Name"); //Asking user to input their firt and last name with their salary
+  let lastName = prompt("Enter user Last Name");
+  let salary = prompt("Enter user salary");
+
+  let employee = {
+    firstName: firstName,
+    lastName: lastName,
+    salary: salary,
+  };
+
+  let userChoice = prompt("Enter 'continue' to enter more employees.")
+  while(userChoice === 'continue'){
+    firstName = prompt("Enter First Name");
+    lastName = prompt("Enter Last Name");
+    salary = prompt("Enter Salary");
+
+    employee = {
+      firstName: firstName,
+      lastName: lastName,
+      salary: salary,
+    }
+
+    employeeList.push(employee);
+    userChoice = prompt("Enter 'continue' to enter more employees.")
+  }
+}
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  let totalSalary = 0;
+  for (let i=0; i<employeesArray.length; i++) {
+    totalSalary += employeesArray[i]; //como es que la i se pone al final. QUe hace exactamente?
+  }
+  return totalsalary/employeesArray.length;
+
 }
 
 // Select a random employee
