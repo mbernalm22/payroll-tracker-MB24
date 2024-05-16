@@ -37,15 +37,17 @@ const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let totalSalary = 0;
   for (let i=0; i<employeesArray.length; i++) {
-    totalSalary += employeesArray[i]; //como es que la i se pone al final. QUe hace exactamente?
+  totalSalary += employeesArray[i]; //como es que la i se pone al final. QUe hace exactamente?
   }
-  return totalsalary/employeesArray.length;
-
+  let averageSalary = totalSalary/employeesArray.length;
+  console.log(averageSalary);
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  const randomEmployee = employeesArray[Math.floor(Math.random*employeesArray.length)];
+  console.log(randomEmployee)
 }
 
 /*
